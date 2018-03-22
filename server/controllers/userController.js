@@ -1,0 +1,27 @@
+import db from './../models';
+
+const userController = {};
+// whomever is using the pai will need to pass in 2 parameters (their username and password) which we get from the request body 
+userController.post = (req, res) => {
+    const { username, password } = req.body 
+
+    // Validation goes here
+
+    const user = new.db.User({
+        username, 
+        password
+    });
+// this saves it to the database
+    user.save().then((newUser) => {
+        res.status(200).json({
+            success: true,
+            data: newUser,
+        });
+    }).catch((err) => {
+        res,status(500).json({
+            message: err,
+        });
+    });
+}
+
+export default userController

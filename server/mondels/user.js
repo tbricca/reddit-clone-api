@@ -18,3 +18,6 @@ const userSchema = new Schema({
 
 // Write some encrption for Password 
  
+// 1st parameter - name of model 2nd parameter - name of Schema 
+const User = mongoose.model('User', userSchema);
+export default User;
