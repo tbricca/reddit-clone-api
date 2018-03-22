@@ -1,11 +1,11 @@
 import express from 'express';
 
+// Controller Imports /// 
+import basicController from './controllers/basicController';
+
+
 const routes = express();
 
-routes.get('/', (req, res) => {
-    res.json({
-        message: 'working'
-    });
-});
-
+routes.get('/', basicController.get)
+ 
 export default routes;
