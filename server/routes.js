@@ -2,10 +2,10 @@ import express from 'express';
 
 const routes = express();
 
-app.get('/', (req, res) => {
+routes.get('/', (req, res) => {
     res.json({
         message: 'working'
     });
-})
+});
 
 export default routes;
