@@ -9,7 +9,7 @@ userController.post = (req, res) => {
 
     // Validation goes here
 // this creates the new instance of the user
-    const user = new.db.User({
+    const user = new db.User({
         username, 
         password
     });
@@ -21,10 +21,10 @@ userController.post = (req, res) => {
             data: newUser,
         });
     }).catch((err) => {
-        res,status(500).json({
+        res.status(500).json({
             message: err,
         });
     });
 }
 
-export default userController
+export default userController;
