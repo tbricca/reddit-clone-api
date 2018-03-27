@@ -1,6 +1,6 @@
 import db from './../models'
 
-const basicController = {};
+const postController = {};
 
 postController.post = (req, res) => {
     const {
@@ -10,7 +10,7 @@ postController.post = (req, res) => {
         userId,
     } = req.body;
 
-    // Validation
+    // Validation either text or link not both 
 
     const post = new db.Post({
         title,
@@ -31,6 +31,6 @@ postController.post = (req, res) => {
     })
 };
 
-export default basicController;
+export default postController;
 
 
