@@ -10,6 +10,6 @@ const routes = express();
 routes.get('/', basicController.get)
  
 // User Routes
-routes.post('/signup, userController.post');
+routes.post('/signup', userController.post);
 
 export default routes;
