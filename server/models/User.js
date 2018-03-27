@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 // Schema defines the whole model - the title, data type, the entire schema, data table, requirements 
 const { Schema } = mongoose;
+ // this because mongoose's default promise library is deprecated
+mongoose.Promise = global.Promise;
 
 const userSchema = new Schema({ 
     username: {
