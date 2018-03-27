@@ -16,6 +16,8 @@ const userSchema = new Schema({
         required: true,
         minlength: [5, 'Password must be 5 or more, come on, we are not trying to get hacked here'],
     },
+    createdAt: { type: Date, default: Date.now },
+    isDeleted: { type: Boolean, defualt: false },
 });
 
 // Write some encrption for Password 
